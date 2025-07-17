@@ -1,4 +1,3 @@
-## This step is to be taken first before any other steps
 # Create VM instances
 1. Download VMware Fusion Pro: https://knowledge.broadcom.com/external/article/368667/download-and-license-vmware-desktop-hype.html
 - I learnt recently that VMware Workstation Pro is now also free for personal use. However, only Fusion supports MacOS, and specifically Silicon-chip Mac, so I am using Fusion Pro in this lab
@@ -11,6 +10,6 @@
 
 3. Create VM instances in VMware Fusion with downloaded ISOs
 - I gave 4GB of RAM for and 64GB and 50GB of storage to Windows Server and Ubuntu respectively. I'd recommend the same amount of storage, while RAM should be adjusted according to your own machine's specs. Here, my machine has a total of 8GB.
-- Choose "Share with your Mac" as networking option for now. We still need the Internet to download tools before we can switch to a private network
- 
+- Choose the network you created in the previous step as networking option. Here, my network is "vmnet2"
+![network](Images/network.jpg)
 4. Finish

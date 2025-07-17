@@ -13,6 +13,7 @@
 
 2. In Server Manager of Windows Server, select *Manage* then *Add Roles and Features*
 - If Server Manager isn't already opened, you search for it from start menu
+![roles-features](Images/roles-features.jpg)
 
 3. Select *Next* to go with the default options until *Server Roles*, select *Active Directory Domain Services*, *DHCP Server*, and *DNS Server*
 
@@ -22,10 +23,12 @@
 A Domain Controller sits at the center of a domain and manages all members of the domain through Group Policy Objects (GPO). A Domain Controller is required when creating a domain.
 
 1. In Server Manager, click on the flag icon at the top right of the window, then select *Promote this Server to a Domain Controller" to open Deployment Configuration window
+![promotion](Images/domain%20promotion.jpg)
 
 2. In Deployment Configuration tab, select *Add a new forest* and enter root domain name.
 - Root domain name should be in the format [domain].com, e.g: mydomain.com
 - Select *Next*
+![deploy-1](Images/deploy-1.jpg)
 
 3. In Domain Controller Options, select the highest functional level for both forest and domain, since we are creating a new forest. Enter Restore Mode password and make sure you remember the password. Select *Next*
 
@@ -45,12 +48,14 @@ DHCP service provisions IP addresses to members of the domain dynamically and ma
 1. In Server Manager, select *Tools* then *DHCP*
 
 2. In the left panel, under DHCP, expand the server, then right-click IPv4, select *New Scope* to start New Scope Wizard
+![wizard](Images/scope-wizard.jpg)
 
 3. In Scope Name, provide a scope name, then click *Next*
 
 4. In IP Address Range, provide a range that is within the subnet configured in ```/Library/Preferences/VMware Fusion/networking``` file
-- For me, the scope has to be within 10.0.0.1 and 10.0.0.255, so I used the range 10.0.0.10 -> 10.0.0.20
+- For me, the scope has to be within 10.0.0.1 and 10.0.0.255, so I used the range 10.0.0.11 -> 10.0.0.20
 - Select *Next*
+![wizard-2](Images/scope-wiz-2.jpg)
 
 5. In Exclusions and Deplay, add any IP addresses within the range that you want to exclude from being provisioned to machines in the domain. Otherwise, leave it blank. Select *Next*
 
@@ -79,5 +84,6 @@ For now, since we don't have any private resources, we only need the DNS server 
 3. Go to Forwarders tab and select *Edit*
 
 4. Add addresses ```8.8.8.8``` and ```8.8.4.4```, which are well-known Google DNS servers. If you know any good public DNS server, feel free to add them as well. Select *OK* to close the window and close DNS Manager
+![forwarders](Images/dns-forwarder.jpg)
 
 5. Our DNS server will now forward DNS queries to the forwarder addresses, which will resolve URL to IP addresses for us. Verify that Internet access is available.   
