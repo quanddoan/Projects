@@ -1,3 +1,4 @@
+## This step is to be taken first before any other steps
 # Create VM instances
 1. Download VMware Fusion Pro: https://knowledge.broadcom.com/external/article/368667/download-and-license-vmware-desktop-hype.html
 - I learnt recently that VMware Workstation Pro is now also free for personal use. However, only Fusion supports MacOS, and specifically Silicon-chip Mac, so I am using Fusion Pro in this lab
