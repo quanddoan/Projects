@@ -1,6 +1,6 @@
-## Add and Configure features in Windows Server
+# Add and Configure features in Windows Server
 
-# Add services
+## Add services
 1. Set Static IP address
 - Our server would need a static IP address to function as a DHCP server
 - Go to *Settings*, then *Network & Internet*, select *Edit* next to IP assignment
@@ -18,7 +18,7 @@
 
 4. Click *Next* and *Install* to install services onto the server. Select *Close* once the installation finishes.
 
-# Promote Server to Domain Controller
+## Promote Server to Domain Controller
 A Domain Controller sits at the center of a domain and manages all members of the domain through Group Policy Objects (GPO). A Domain Controller is required when creating a domain.
 
 1. In Server Manager, click on the flag icon at the top right of the window, then select *Promote this Server to a Domain Controller" to open Deployment Configuration window
@@ -39,7 +39,7 @@ A Domain Controller sits at the center of a domain and manages all members of th
 
 8. The system will then reboot. Login with Admin credentials. In Server Manager, you should see an option for ```AD DS``` on the right panel. Our domain is now set up.
 
-# Configure DHCP service
+## Configure DHCP service
 DHCP service provisions IP addresses to members of the domain dynamically and make sures any machine joining the domain will automatically be assigned an IP address to communicate with other members of the domain
 
 1. In Server Manager, select *Tools* then *DHCP*
@@ -68,7 +68,7 @@ DHCP service provisions IP addresses to members of the domain dynamically and ma
 
 12. The IPv4 icon in the right panel of DHCP window should have a green check to signify that the scope is activated. If not, right-click on the scope under IPv4 and select *Activate*
 
-# Configure DNS Server
+## Configure DNS Server
 DNS server is necessary for access the Internet, as it translates URL into IP addresses that routers can use to navigate. In a domain, DNS server can also allow access to private resources.
 For now, since we don't have any private resources, we only need the DNS server for Internet access, so configuring forwarders should be enough.
 
