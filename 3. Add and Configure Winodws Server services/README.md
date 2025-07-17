@@ -87,3 +87,19 @@ For now, since we don't have any private resources, we only need the DNS server 
 ![forwarders](Images/dns-forwarder.jpg)
 
 5. Our DNS server will now forward DNS queries to the forwarder addresses, which will resolve URL to IP addresses for us. Verify that Internet access is available.   
+
+## Create User account
+1. In Server Manager, select *Tools* then *Activie Directory Users and Computers*
+
+2. Under the domain name, right-click on *Users*, go to *New* -> User
+
+3. In the newly opened window, fill in user's first and last name and logon name. Click *Next*
+
+4. Enter the account password and select options for this password:
+- User must change password at next logon
+- User can not change password
+- Password never expire
+- Account is disabled
+The options are self-explantory. For me, I only enable *Password never expire* for simplicity. Click *Next*
+
+5. Review user account and finish.
